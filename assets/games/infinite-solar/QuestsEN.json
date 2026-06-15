@@ -1,0 +1,166 @@
+{
+    "c2array": true,
+    "size": [
+        6,
+        8,
+        1
+    ],
+    "data": [
+        [
+            [
+                0
+            ],
+            [
+                "A NEW SYSTEM"
+            ],
+            [
+                "GET YOUR FIRST PLANET"
+            ],
+            [
+                "Star"
+            ],
+            [
+                1
+            ],
+            [
+                "Planets"
+            ],
+            [
+                1
+            ],
+            [
+                0
+            ]
+        ],
+        [
+            [
+                1
+            ],
+            [
+                "HAS CROSSED"
+            ],
+            [
+                "COLLECTS 5 STARS"
+            ],
+            [
+                "YearsPoints"
+            ],
+            [
+                5
+            ],
+            [
+                "Stars"
+            ],
+            [
+                5
+            ],
+            [
+                0
+            ]
+        ],
+        [
+            [
+                2
+            ],
+            [
+                "IN ORBIT"
+            ],
+            [
+                "GETS 10 YEARS TOTAL"
+            ],
+            [
+                "YearsPoints"
+            ],
+            [
+                5
+            ],
+            [
+                "Points"
+            ],
+            [
+                10
+            ],
+            [
+                2
+            ]
+        ],
+        [
+            [
+                3
+            ],
+            [
+                "LIKE A FLY"
+            ],
+            [
+                "GETS A 0.4 MASS DWARF PLANET"
+            ],
+            [
+                "Star"
+            ],
+            [
+                1
+            ],
+            [
+                "04Planets"
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ]
+        ],
+        [
+            [
+                4
+            ],
+            [
+                "GROWING"
+            ],
+            [
+                "SCANS 5 PLANETS"
+            ],
+            [
+                "Star"
+            ],
+            [
+                2
+            ],
+            [
+                "Planets"
+            ],
+            [
+                5
+            ],
+            [
+                2
+            ]
+        ],
+        [
+            [
+                5
+            ],
+            [
+                "SOMETHING ELSE"
+            ],
+            [
+                "GETS A PLANET OF 0.6 MASS"
+            ],
+            [
+                "YearsPoints"
+            ],
+            [
+                5
+            ],
+            [
+                "06Planets"
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ]
+        ]
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "D0": "Hey! I need you to help me get my treasure.",
+        "D1": "You will have to pass some tests, but don't worry, they are not complicated... for now.",
+        "D2": "First touch that cell, I've left you a shield so you don't get off on the wrong foot.",
+        "S2": "Playing",
+        "D3": "Wow! Great! You got your first point. Every cell you touch will give you points, except the trap cell. That's my doing.",
+        "D4": "There's the catch, I can't remember where I put them anymore, sorry!",
+        "D5": "Ok! Listen to me well, here there is a box with a key and another with a lock, you must find the key before the lock, if you don't do it in that order we can't open it.",
+        "D6": "Look! You got a heart back, that's great. Keep up the good work.",
+        "D7": "Mmmm, here I think I have left a vision cell. It will show you all the cells that contain \"something\" but be very careful, it's a double-edged sword, they won't tell you if that \"something\" is a trap or not."
+    }
+}

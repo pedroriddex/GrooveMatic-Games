@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(3em);}
+    to {opacity: 1; transform: translateY(0em);}
+}
+
+@keyframes appearSection {
+    from {opacity: 0; transform: translateY(3em);}
+    to {opacity: 1; transform: translateY(0em);}
+}
+
+@keyframes pageCharge {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes orbit {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes geometric {
+    0% {transform: translateY(-130px); opacity: 0;}
+    40% {transform: translateY(-130px); opacity: 0;}
+    100% {transform: translateY(80px); opacity: 1;}
+}
+
+@keyframes openMenu {
+    0% {width: 0; color:transparent;}
+    50% {width: 100vw; color:transparent;}
+    100% {color:var(--sec-color);} 
+}
+
+:root {
+    --main-color: #000000;
+    --sec-color: #F3F2EE;
+    --two-column: calc(100%/2);
+    --three-column: calc(100%/3);
+    --four-column: calc(100%/4);
+    --five-column: calc(100%/5);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    background-color: var(--sec-color);
+    font-family: 'Rubik', sans-serif;
+    color: var(--main-color);
+
+    animation: pageCharge .4s ease-in-out;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+/* END OF RESET CSS */
+
+h1 {
+    font-size: 4.375rem;
+    font-weight:900;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight:800;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight:600;
+}
+
+p, a {
+    font-size: 0.85rem;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+a.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: .3125rem;
+    transition: all .2s;
+    transition-timing-function: ease-out;
+}
+
+a.btn.main-btn, a.btn.sec-btn:hover {
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    border: solid 1px var(--main-color);
+}
+
+a.btn.sec-btn, a.btn.main-btn:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border: solid 1px var(--main-color);
+}
+
+a.btn.main-btn.white, a.btn.sec-btn.white:hover {
+    background-color: var(--sec-color);
+    color: var(--main-color);
+    border: solid 1px var(--sec-color);
+}
+
+a.btn.sec-btn.white, a.btn.main-btn.white:hover {
+    background-color: transparent;
+    color: var(--sec-color);
+    border: solid 1px var(--sec-color);
+}
+
+div:not(.games-block), section {
+    animation: appear linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+}
+
+#wrap {
+    max-width: 1300px;
+    padding: 0 0rem;
+    margin: auto;
+}
+
+section {
+    padding: 0 1rem;
+    margin: 0 1rem;
+}
+
+.header {
+    padding:1.5rem 1rem;
+}
+
+.header .header-nav {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: -.5rem;
+}
+
+.header .header-nav .header-nav-menu a {
+    display: inline-block;
+    margin-left:1.5rem;
+
+    transition: all .2s;
+}
+
+.header .header-nav a:hover {
+    opacity: .8;
+}
+
+.container-page-banner {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+}
+
+.main-banner {
+    background-color:black;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0 2rem;
+
+    border-radius: 5px;
+
+    padding: 2rem;
+
+}
+
+.main-banner .main-banner-info {
+    color:var(--sec-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    gap: 1rem 0;
+}
+
+.main-banner .main-banner-image {
+    width: 30%;
+    animation-name: orbit;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.icons-info {
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    margin: 2rem 0;
+
+    gap: 1rem 1rem;
+
+}
+
+.item-icon {
+    flex-grow: 1;
+    min-width: 10rem;
+    padding: 1rem;
+    border: solid 1px var(--main-color);
+
+    display: flex;
+
+    flex-flow: column nowrap;
+    gap: 1rem 0;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+.item-icon-image {
+    max-width: 3rem;
+}
+
+.container-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.container-about .about-block-info {
+    min-width: 360px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding:5rem 2rem;
+    align-items: start;
+}
+
+.container-about .about-block-image {
+    min-width: 360px;
+    padding:3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-about .about-block-image img{
+    max-width: 360px;
+}
+
+.container-gm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+    padding: 4rem 0;
+    margin: 2rem 1rem;
+    background-color: var(--main-color);
+    color: var(--sec-color);
+
+    border-radius: 5px;
+}
+
+.container-gm .down{
+
+    position:relative;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+}
+
+.container-gm .up{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: translateY(80px);
+    height: 80px;
+
+    animation-name: geometric;
+    animation-duration: 3s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: infinite;
+}
+
+.container-gm .geometric-info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    align-items: start;
+    
+    min-width: 20rem;
+    padding:2rem;
+}
+
+.container-gm .geometric-anim {    
+    min-width: 18.75rem;
+    padding:2rem;
+}
+
+footer {
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 5rem;
+
+    gap: 2rem 2rem;
+    padding:4rem;
+
+    border-radius: 10px 10px 0 0;
+}
+
+footer .footer-block {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 0;
+
+    color:var(--sec-color)
+}
+
+footer .footer-block img{
+    max-width: 200px;
+}
+
+.social-icon {
+    width:1.5rem;
+    stroke: var(--sec-color);
+}
+
+/* GAMES */
+
+ .container-games {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+ }
+
+.container-games .games-block {
+    flex-grow: 1;
+    padding:0rem;
+    transform: translateY(1rem);
+
+    transition:all .2s;
+}
+
+.container-games .games-block img {
+
+    width: 100%;
+}
+
+.container-games:hover .games-block {
+    opacity: 0.6;
+}
+
+.container-games .games-block:hover {
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+.container-games h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-1rem);
+
+    transition: all .2s;
+}
+
+.container-games .games-block:hover h3 {
+    opacity: 1;
+    transform: translateY(.5rem);
+}
+
+.container-gallery {
+    display: flex;
+    gap: 2rem;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.container-gallery img {
+    border: solid 1px var(--main-color);
+    border-radius: 5px;
+
+    min-width: 250px;
+}
+
+/* CONTACT */
+
+.contact-form {
+    height: 70vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.Content__FormContainer-sc-3sh3bs-0 a {
+    display: none!important;
+}
+
+@media (min-width: 320px) and (max-width: 660px){
+
+    .nomobile {
+        display: none!important;
+    }
+
+    .header-nav-menu.nomobile.open {
+        display: flex!important;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        gap: 2rem;
+
+        position: fixed;
+        background: var(--main-color);
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        color: var(--sec-color);
+
+        text-align: center;
+
+
+        animation: openMenu .5s ease-out;
+    }
+
+    .header-nav-menu.nomobile a.btn{
+        color: var(--sec-color);
+        border:none;
+        padding: 0;
+    }
+
+    .header-nav-menu.nomobile a {
+        display: block;
+        font-size: 1.5em;
+        font-weight: 200;   
+    }
+
+    .main-banner {
+        padding: 5rem 1rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .container-about .about-block-info {
+        padding:3rem 0rem;
+    }
+
+    section, footer {
+        border-radius: 0!important;
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+}
+
+@media (min-width: 661px){
+
+    .nocomputer {
+        display: none!important;
+    }
+}
+
+/* TOGLE MENU */
+
+button {
+    background: transparent;
+    border: 0;
+  }
+  button:focus {
+    outline: none;
+  }
+  
+  .burger {
+    position: relative;
+    width: 22px;
+    height: 14px;
+    cursor: pointer;
+
+    z-index: 200;
+  }
+  .burger:hover span {
+    background: var(--main-color);
+  }
+  .burger span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.2s, background 0s;
+    background: var(--main-color);
+  }
+  .burger span:nth-child(2) {
+    top: 6px;
+  }
+  .burger span:last-child {
+    top: 12px;
+  }
+  
+  .nav-open span:first-child, .nav-open span:last-child {
+    top: 8px;
+  }
+  .nav-open span:first-child {
+    transform: rotate(45deg);
+    background-color: var(--sec-color);
+  }
+  .nav-open span:last-child {
+    transform: rotate(-45deg);
+    background-color: var(--sec-color);
+  }
+  .nav-open span:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+.iframe-container {
+    min-width: 300px;
+    aspect-ratio: 9/16;
+
+    width: 100%;
+    max-width: 380px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid 1px var(--main-color);
+    border-radius: 10px;
+    max-width: 540px;
+    max-height: 960px;
+}
+
+.game-wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1rem;
+    padding:1rem;
+}
+
+.container-playnow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
+.container-playnow .block.games-block {
+    display: flex;
+    gap: 1rem;
+
+    background: white;
+    border-radius: 5px;
+    padding: 2rem;
+
+    transition: .3s;
+}
+
+.container-playnow .block.games-block:hover {
+    background: rgba(255, 255, 255, 0.479);
+}
+
+.container-playnow .block.games-block .games-block-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-playnow .block.games-block .games-block-content p {
+    margin:.5rem 0
+}
+
+.container-playnow .block.games-block .games-block-content .btn {
+    text-align: center;
+}
+
+.container-playnow a img {
+    opacity: 1;
+    transition: all .3s;
+    margin-bottom:.5rem;
+    border-radius: 5px;
+
+    height: 100%;
+    object-fit: cover;
+}
+
+.mark {
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    padding:.3rem .5rem .2rem .5rem;
+    line-height: 0;
+    border-radius: 5px;
+}
+
+.mark.deprecated {
+    background-color:#d35b5b;
+}

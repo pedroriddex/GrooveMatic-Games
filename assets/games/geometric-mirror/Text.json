@@ -1,0 +1,42 @@
+{
+    "c2array": true,
+    "size": [
+        1,
+        10,
+        1
+    ],
+    "data": [
+        [
+            [
+                "EN"
+            ],
+            [
+                "Your name"
+            ],
+            [
+                "Please choose a name"
+            ],
+            [
+                "Tu viaje está a punto de comenzar."
+            ],
+            [
+                "Pulsa en cualquiera de los dos lados de la pantalla para girar la figura Mirror."
+            ],
+            [
+                "Eso que baja por tu pantalla es una figura Geometric, debes colocar la tuya en la misma posición."
+            ],
+            [
+                "¡Muy bien! Has conseguido tu primer punto, pero no te confíes, verás como poco a poco se volverá mucho más complejo."
+            ],
+            [
+                "Pongamos a prueba tus habilidades."
+            ],
+            [
+                "Ese circulo que ves bajo tu Mirror es el Activador de Control, al pulsarlo puedes realizar acciones especiales con tu Mirror."
+            ],
+            [
+                "Mantén el dedo sobre el Activador de Control."
+            ]
+        ]
+    ]
+}
