@@ -1,0 +1,9 @@
+{
+  "name": "groovematic-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node _src/build.mjs",
+    "dev": "node _src/build.mjs && node _src/serve.mjs"
+  }
+}

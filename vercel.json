@@ -1,0 +1,203 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node _src/build.mjs",
+  "outputDirectory": "dist",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/games.html",
+      "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/games/:slug.html",
+      "destination": "/games/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/play-now",
+      "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/play-now.html",
+      "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/play-now/:slug.html",
+      "destination": "/games/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/play-now/:slug",
+      "destination": "/games/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/power-square",
+      "destination": "/games/power-square",
+      "permanent": true
+    },
+    {
+      "source": "/es/games/:slug",
+      "destination": "/es/juegos/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/es/games",
+      "destination": "/es/juegos",
+      "permanent": true
+    },
+    {
+      "source": "/studio",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/games/infinite-solar",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/infinite-solar",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/geometric-mirror-2",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/geometric-mirror-2",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/power-cube",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/power-cube",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/geometric-mirror",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/geometric-mirror",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/blind-and-oneeyed",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/blind-and-oneeyed",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/bounce-stroke",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/bounce-stroke",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/pixel-puxel",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/pixel-puxel",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/wordle-war",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/wordle-war",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/way-of-dott",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/way-of-dott",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/up-up-up",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/up-up-up",
+      "destination": "/es/juegos",
+      "permanent": false
+    },
+    {
+      "source": "/games/savage",
+      "destination": "/games",
+      "permanent": false
+    },
+    {
+      "source": "/es/juegos/savage",
+      "destination": "/es/juegos",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(css|js|brand)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
+}
